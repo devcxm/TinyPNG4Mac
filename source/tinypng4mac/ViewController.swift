@@ -38,7 +38,11 @@ class ViewController: NSViewController, DragContainerDelegate, NSTableViewDelega
 	
 	override func awakeFromNib() {
 		self.view.layer?.backgroundColor = NSColor.init(white: 0.9, alpha: 1).CGColor
-		
+        let obj = NSUserDefaults.standardUserDefaults().objectForKey("tinypng_apiKey");
+        if (obj != nil) {
+            apiKey.stringValue = obj as!String;
+        }
+        
 		dragContainer.delegate = self
 		fileTableView.setDelegate(self)
 		fileTableView.setDataSource(self)
@@ -88,6 +92,7 @@ class ViewController: NSViewController, DragContainerDelegate, NSTableViewDelega
 	
 	@IBAction func saveKey(sender: AnyObject) {
 		TPClient.sApiKey = apiKey.stringValue
+        NSUserDefaults.standardUserDefaults() .setObject(apiKey.stringValue, forKey: "tinypng_apiKey");
 		apiKey.window?.makeFirstResponder(nil)
 		let alert = NSAlert.init()
 		alert.addButtonWithTitle("OK")
