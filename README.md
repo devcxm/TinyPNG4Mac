@@ -12,14 +12,14 @@ This is a client of TinyPNG for Mac, with which you can compress pngs without op
 
 ### Download
 
-\>\>\>\>\>\>[app](./archive/tinypng.app.zip)\<\<\<\<\<\<
+\>\>\>\>\>\>[latest releases](/releases/latest)\<\<\<\<\<\<
 
 Check "Anywhere" if you can not open this app. Just for the first time, and I suggest you uncheck it after you open this app for security.
 
 ### Preview
 
-![](./preview/preview.png)
-![](./preview/tasks.png)
+![](https://github.com/kyleduo/TinyPNG4Mac/raw/master/preview/preview.png)
+![](https://github.com/kyleduo/TinyPNG4Mac/raw/master/preview/tasks.png)
 
 ### License
 
